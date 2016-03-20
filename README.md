@@ -44,7 +44,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 My photos do not load onto the timeline, but my captions do. 
 
-Describe any challenges encountered while building the app.
+
 
 ## License
 
