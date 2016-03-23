@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="370" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V0t-Pg-Rvx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="370" id="SEs-IP-hm9" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
@@ -111,7 +111,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionLabel" destination="J8p-Rw-2Y0" id="WPf-IP-Aew"/>
-                                            <outlet property="photofromParse" destination="75w-9e-CWV" id="d56-hL-mHG"/>
+                                            <outlet property="postPicture" destination="75w-9e-CWV" id="4hg-yp-Zx5"/>
                                             <outlet property="usernameLabel" destination="1cB-yN-B5G" id="bnC-xU-o3Y"/>
                                         </connections>
                                     </tableViewCell>
@@ -177,6 +177,7 @@
                     <connections>
                         <outlet property="captionText" destination="tdG-ns-uId" id="g5z-iK-Kw6"/>
                         <outlet property="imageView" destination="1Fy-KE-cTy" id="oOc-o1-c9x"/>
+                        <outlet property="pickedImageView" destination="1Fy-KE-cTy" id="UsG-k1-UYM"/>
                         <outlet property="uploadPicture" destination="hbA-DC-tga" id="Nch-bd-sNg"/>
                     </connections>
                 </viewController>

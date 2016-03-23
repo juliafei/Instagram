@@ -14,6 +14,8 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate, U
     @IBOutlet weak var captionText: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var uploadPicture: UIButton!
+    
+    @IBOutlet weak var pickedImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +52,12 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate, U
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             
             // Do something with the images (based on your use case)
-            imageView.image = editedImage
+            if editedImage.imageAsset != nil{
+                imageView.image = editedImage
+            }else{
+                pickedImageView.image = originalImage
+            }
+            
             
             // Dismiss UIImagePickerController to go back to your original view controller
             dismissViewControllerAnimated(true, completion: nil)
@@ -93,9 +100,12 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate, U
         resizeImageView.image = image
         
         UIGraphicsBeginImageContext(resizeImageView.frame.size)
+    
         resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        
         return newImage
     }
     

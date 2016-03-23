@@ -46,15 +46,16 @@ class PostsTimelineViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //new cell that cotains the caption & image
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as! PostCell
+        cell.photos = photos![indexPath.row]
         
-        let photo = photos[indexPath.row]
+       // let photo = photos[indexPath.row]
         
         //cell.photofromParse.file = photo["media"] as? PFFile
         //cell.photofromParse.loadInBackground()
-        cell.photofromParse.reloadInputViews()
+      //  cell.photofromParse.reloadInputViews()
         
-        let caption = photo ["caption"] as! String
-        cell.captionLabel.text = caption
+        //let caption = photo ["caption"] as! String
+        //cell.captionLabel.text = caption
 
         return cell
     }

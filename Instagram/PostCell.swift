@@ -9,15 +9,25 @@
 import UIKit
 import Parse
 import ParseUI
+import AFNetworking
 
 class PostCell: UITableViewCell {
     
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var postPicture: UIImageView!
     
-    @IBOutlet weak var photofromParse: PFImageView!
-
+    var photos: PFObject!{
+        didSet {
+            
+            captionLabel.text = photos["caption"] as? String
+            let file = photos["media"] as? PFFile
+            let url = NSURL(string: (file?.url)!)
+            postPicture.setImageWithURL(url!)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

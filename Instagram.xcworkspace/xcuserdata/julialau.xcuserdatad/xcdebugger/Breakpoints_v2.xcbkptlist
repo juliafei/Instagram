@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/PictureViewController.swift"
-            timestampString = "480140417.382419"
+            timestampString = "480460839.610155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "onSubmit(_:)"
             landmarkType = "5">
          </BreakpointContent>
