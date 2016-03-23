@@ -2,7 +2,7 @@
 
 **Salty Oasis** is a photo sharing app using Parse as its backend.
 
-Time spent: **11** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
