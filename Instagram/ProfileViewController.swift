@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var logoutButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,15 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    @IBAction func onLogout(sender: AnyObject) {
+        PFUser.logOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
+       // let vc = storyboard.instantiateInitialViewController("LoginViewController")
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
